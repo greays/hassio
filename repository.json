@@ -1,5 +1,5 @@
 {
-  "name": "ESPHome Hass.io Add-Ons",
-  "url": "https://github.com/esphome/hassio",
+  "name": "ESPHome(add rs485) Hass.io Add-Ons",
+  "url": "https://github.com/greays/hassio",
   "maintainer": "ESPHome <contact@esphome.io>"
 }
