@@ -39,7 +39,7 @@ base: &base
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
-  base_image: esphome/esphome-hassio-base-{arch}:2.0.1
+  base_image: esphome/esphome-hassio-base-{arch}:2.1.1
 
 esphome-dev:
   <<: *base
@@ -56,7 +56,7 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.14.3'  # BETA
+  version: '1.14.4'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Hass.io add-on."
   url: https://beta.esphome.io/
@@ -67,7 +67,7 @@ esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '1.14.3'  # STABLE
+  version: '1.14.4'  # STABLE
   slug: esphome
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
