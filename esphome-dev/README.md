@@ -37,7 +37,7 @@ Then just click UPLOAD and the sensor will magically appear in Home Assistant:
 To install this Home Assistant add-on you need to add the ESPHome add-on repository
 first:
 
-1. Add the esphome add-ons repository to your Home Assistant instance. You can do this by navigating to the "Add-on store" tab in the Supervisor panel and then entering https://github.com/esphome/hassio in the "Add repository" field after selecting "Repositories" from the top-right menu.
+1. Add the ESPHome add-ons repository to your Home Assistant instance. You can do this by navigating to the "Add-on store" tab in the Supervisor panel and then entering https://github.com/esphome/hassio in the "Add repository" field after selecting "Repositories" from the top-right menu.
 2. Now scroll down and select the "ESPHome" add-on.
 3. Press install to download the add-on and unpack it on your machine. This can take some time.
 4. Optional: If you're using SSL/TLS certificates and want to encrypt your communication to this add-on, please enter `true` into the `ssl` field and set the `fullchain` and `certfile` options accordingly.
@@ -89,7 +89,11 @@ authentication by setting it to `true`.
 
 Manually override which ESPHome version to use in the add-on.
 For example to install the latest development version, use `"esphome_version": "dev"`,
-or for version 1.14.0: `"esphome_version": "v1.14.0""`.
+or for version 1.14.0: `"esphome_version": "v1.14.0"`.
+
+This can also be used to specify a branch of a fork of the esphome repository.
+For example to install the test_new_component branch of a fork made by user123, use `"user123:test_new_component"`.
+This usage assumes the forked repository is named `esphome`.
 
 Please note that this does not always work and is only meant for testing, usually the
 ESPHome add-on and dashboard version must match to guarantee a working system.
