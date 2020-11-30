@@ -43,6 +43,6 @@
   "slug": "esphome-rs485",
   "startup": "application",
   "url": "https://esphome.io/",
-  "version": "1.15.2",
+  "version": "1.15.3",
   "webui": "http://[HOST]:[PORT:6053]"
 }
