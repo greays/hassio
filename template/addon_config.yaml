@@ -1,9 +1,6 @@
 ---
 base: &base
   url: https://esphome.io/
-  webui: 'http://[HOST]:[PORT:6052]'
-  startup: application
-  boot: auto
   arch:
     - amd64
     - armv7
@@ -11,9 +8,6 @@ base: &base
   # Uses Hass.io API (auth)
   hassio_api: true
   auth_api: true
-  hassio_role: default
-  # Doesn't use HA API
-  homeassistant_api: false
   # Host network mode for mDNS
   host_network: true
   # Ingress settings
@@ -21,7 +15,7 @@ base: &base
   ingress_port: 0
   panel_icon: 'mdi:chip'
   # Automatically add UART devices to addon
-  auto_uart: true
+  uart: true
   ports:
     '6052/tcp': null
   ports_description:
@@ -38,7 +32,7 @@ base: &base
     streamer_mode: bool?
     relative_url: str?
     status_use_ping: bool?
-  base_image: esphome/esphome-hassio-base-{arch}:2.5.0
+  base_image: esphome/esphome-hassio-base-{arch}:3.0.0
 
 esphome-dev:
   <<: *base
@@ -56,26 +50,24 @@ esphome-beta:
   <<: *base
   directory: esphome-beta
   name: ESPHome (beta)
-  version: '1.15.3'  # BETA
+  version: '1.18.0'  # BETA
   slug: esphome-beta
   description: "Beta version of ESPHome Hass.io add-on."
   url: https://beta.esphome.io/
   image: esphome/esphome-hassio-{arch}
   stage: experimental
-  options: {}
 
 esphome-stable:
   <<: *base
   directory: esphome
   name: ESPHome
-  version: '1.15.3'  # STABLE
+  version: '1.18.0'  # STABLE
   slug: esphome
   description: "ESPHome Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
   image: esphome/esphome-hassio-{arch}
-  stage: stable
-  options: {}
 
 copy_files:
   icon.png:
   logo.png:
   README.md:
+  DOCS.md:
