@@ -5,7 +5,7 @@
     "aarch64"
   ],
   "auth_api": true,
-  "description": "RS485 Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
+  "description": "Stable(include rs485 component) Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "hassio_api": true,
   "host_network": true,
   "ingress": true,
@@ -16,7 +16,7 @@
   ],
   "name": "ESPHome (rs485)",
   "options": {
-    "esphome_version": "rs485"
+    "esphome_version": "greays:master"
   },
   "panel_icon": "mdi:chip",
   "ports": {
@@ -35,9 +35,9 @@
     "status_use_ping": "bool?",
     "streamer_mode": "bool?"
   },
-  "slug": "esphome-dev",
+  "slug": "esphome-rs485",
   "stage": "experimental",
   "uart": true,
   "url": "https://next.esphome.io/",
-  "version": "rs485"
+  "version": "1.18.0"
 }
