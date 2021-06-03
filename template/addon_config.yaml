@@ -57,6 +57,18 @@ esphome-beta:
   image: esphome/esphome-hassio-{arch}
   stage: experimental
 
+esphome-rs485:
+  <<: *base
+  directory: esphome-rs485
+  name: ESPHome (rs485)
+  version: '1.18.0'  # STABLE
+  slug: esphome-rs485
+  description: "ESPHome(rs485) Hass.io add-on for intelligently managing all your ESP8266/ESP32 devices."
+  url: https://next.esphome.io/
+  stage: experimental
+  options:
+    esphome_version: rs485
+
 esphome-stable:
   <<: *base
   directory: esphome
