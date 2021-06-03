@@ -1,17 +1,12 @@
 {
   "arch": [
     "amd64",
-    "i386",
     "armv7",
     "aarch64"
   ],
   "auth_api": true,
-  "auto_uart": true,
-  "boot": "auto",
-  "description": "Stable(include rs485 component) Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
+  "description": "RS485 Version! Manage and program ESP8266/ESP32 microcontrollers through YAML configuration files",
   "hassio_api": true,
-  "hassio_role": "default",
-  "homeassistant_api": false,
   "host_network": true,
   "ingress": true,
   "ingress_port": 0,
@@ -21,14 +16,14 @@
   ],
   "name": "ESPHome (rs485)",
   "options": {
-    "esphome_version": "greays:master"
+    "esphome_version": "rs485"
   },
   "panel_icon": "mdi:chip",
   "ports": {
-    "6053/tcp": null
+    "6052/tcp": null
   },
   "ports_description": {
-    "6053/tcp": "Web interface (Not required for Hass.io Ingress)"
+    "6052/tcp": "Web interface (Not required for Home Assistant Ingress)"
   },
   "schema": {
     "certfile": "str?",
@@ -40,9 +35,9 @@
     "status_use_ping": "bool?",
     "streamer_mode": "bool?"
   },
-  "slug": "esphome-rs485",
-  "startup": "application",
-  "url": "https://esphome.io/",
-  "version": "1.15.3",
-  "webui": "http://[HOST]:[PORT:6053]"
+  "slug": "esphome-dev",
+  "stage": "experimental",
+  "uart": true,
+  "url": "https://next.esphome.io/",
+  "version": "rs485"
 }
